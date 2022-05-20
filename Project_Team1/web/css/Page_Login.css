@@ -1,0 +1,90 @@
+* {
+    font-family: Arial;
+    text-decoration: none;
+    font-size: 20px;
+}
+.error{
+    color: red;
+    font-size: 20px;
+}
+:root {
+    blue: #0cf;
+    blue: #008fb3;
+    colorfont: #464a4d;
+    white: #fff;
+    colorbackground: #eeeeee;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+#wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    /*background-image: url(image.jpg);*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    text-align: center;
+    justify-content: center;
+    background-image: url('https://preview.redd.it/5rbuodmlirh31.jpg?auto=webp&s=cc447550b6a2f33db76da2cf513b33a129ad4878');
+    /*animation: change 60s infinite ease-in-out;*/
+}
+
+#signup-form {
+    /*opacity: 80%;*/
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 100px 600px;
+    /*box-shadow: rgba(9, 107, 69) 0px 30px 60px -12px inset, rgba(248, 229, 0) 0px 18px 36px -18px inset;*/
+    padding: 40px 30px 38px;
+    text-align: left;
+    background-color: white;
+}
+
+.logo {
+    text-align: center;
+    height: 5vh;
+    align-self: center;
+}
+
+.btn {
+    width: 100%;
+}
+
+/*
+@keyframes change {
+    0% {
+        background-image: url('../image/1.jpg');
+    }
+    20% {
+        background-image: url('../image/2.jpg');
+    }
+    40% {
+        background-image: url('../image/3.jpg');
+    }
+    60% {
+        background-image: url('../image/4.jpg');
+    }
+    80% {
+        background-image: url('../image/5.jpg');
+    }
+    100% {
+        background-image: url('../image/6.jpg');
+    }
+}*/
+
+.close {
+    color: green;
+    float: right;
+    top: 10px;
+    font-size: 60px;
+    text-decoration: none;
+}

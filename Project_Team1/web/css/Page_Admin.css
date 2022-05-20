@@ -1,0 +1,486 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 19, 2021, 7:55:47 PM
+    Author     : Administrator
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.error{
+    color: red;
+    
+}
+html {
+    font-size: 15px;
+}
+
+body {
+    overflow-x: hidden;
+           background-image: url('https://preview.redd.it/5rbuodmlirh31.jpg?auto=webp&s=cc447550b6a2f33db76da2cf513b33a129ad4878');
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.navigation {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: #023647;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.navigation.active {
+    width: 3rem;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+
+.navigation ul li:hover {
+    background: #F7CD01;
+}
+
+.navigation ul li:first-child {
+    margin-bottom: 1.5rem;
+}
+
+.navigation ul li:first-child:hover {
+    background: transparent;
+}
+
+.navigation ul li a {
+    /*position: relative;*/
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navigation ul li a .icon {
+    /*position: relative;*/
+    display: block;
+    /*min-width: 3rem;*/
+    height: 8rem;
+    /*line-height: 4rem;*/
+    text-align: center;
+        padding-top: 30px;
+        padding-right: 20px;
+        padding-left: 20px;
+}
+
+.navigation ul li a .icon .fa {
+    color: #fff;
+    font-size: 1.5rem;
+        padding-top: 20px;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    align-content: center;
+    /*padding: 0 .5rem;*/
+    height: 8rem;
+    padding-top: 30px;
+    line-height: 4rem;
+    text-height: 2000px;
+    text-transform: uppercase;
+    margin-right: 20px;
+    font-size: 20px;
+/*    white-space: nowrap;*/
+}
+
+
+/* hết phần navbar menu*/
+
+
+/*Phần main*/
+
+.main {
+    position: absolute;
+    width: calc(100% - 300px);
+    height: 100%;
+    left: 300px;
+    background-color: #f5f5f5;
+        /*background-image: url('https://preview.redd.it/5rbuodmlirh31.jpg?auto=webp&s=cc447550b6a2f33db76da2cf513b33a129ad4878');*/
+    transition: 0.5s;
+}
+
+.main.active {
+    width: calc(100% - 3rem);
+    left: 3rem;
+}
+
+.main .topbar {
+    width: 100%;
+    height: 60px;
+    padding: 0 10px;
+    display: flex;
+        background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main .topbar .toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    /*background-color: #f00;*/
+    cursor: pointer;
+}
+
+.toggle::before {
+    content: '\f0c9';
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    font-size: 24px;
+    text-align: center;
+    color: #111;
+}
+
+
+/*phần search*/
+
+.search {
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+
+.search label {
+    position: relative;
+    width: 100%;
+}
+
+.search label input {
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.search label .fa {
+    position: absolute;
+    left: 15px;
+    top: 4px;
+}
+
+.user {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.user img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*dùng object-fit khi ta thay đổi width và height
+     thì bức ảnh của chúng ta vẫn luôn căn giữa mà 
+     không bị vỡ ảnh hay bị nén ảnh. */
+}
+
+.cardBox {
+    /*position: relative;*/
+    margin-left: 50px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    width: 80%;
+    /*padding: 50px;*/
+    background-color: transparent;
+    /*        padding-left: 25%;*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.cardBox .card {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.cardBox .card .number {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.cardBox .card .cardName {
+    color: #999;
+}
+
+.cardBox .card .iconBox {
+    font-size: 2.5rem;
+    color: #096B45;
+}
+
+
+/*Phần detail bảng thống kê*/
+
+.details {
+    position: relative;
+    width: 100%;
+    padding-left: 50px;
+    margin: 0 auto;
+    /*display: grid;*/
+    /*grid-template-columns: 2fr 1fr;*/
+    /*chia khối detail thành 2 khối*/
+}
+
+.details .recentOrders {
+    /*position: relative;*/
+    /*padding: 0 auto;*/
+    width: 1500px;
+    margin-bottom: 20px;
+    /*display: grid;*/
+    min-height: 530px;
+    background: #fff;
+    padding: 20px;
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.cardHeader h2 {
+    font-weight: 600;
+}
+
+.btn {
+    position: relative;
+    padding: 5px 10px;
+    background: #096B45;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.btn:hover{
+    background-color: #F7CD01;
+}
+
+.details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.details table thead td {
+    font-weight: 1000;
+}
+
+.details .recentOrders table tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.details .recentOrders table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.details .recentOrders table tr:hover {
+    background: #023647;
+    color: #fff;
+}
+
+.details .recentOrders table tr td {
+    padding: 9px 5px;
+}
+
+.details .recentOrders table thead tr td:last-child,
+.details .recentOrders table tbody tr td:last-child {
+    text-align: right;
+}
+
+.details .recentOrders table thead tr td:nth-child(2),
+.details .recentOrders table tbody tr td:nth-child(2) {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.details .recentOrders table thead tr td:nth-child(3),
+.details .recentOrders table tbody tr td:nth-child(3) {
+    text-align: center;
+    padding-right: 20px;
+}
+
+.status {
+    position: relative;
+    padding: 2px 4px;
+    background: #f00;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.delivered {
+    background: #8de02c;
+}
+
+.pending {
+    background: #f9ca3f;
+}
+
+.return {
+    background: #f00;
+}
+
+.inprogress {
+    background: #1795ce;
+}
+
+.details .recentCustomers {
+    position: relative;
+    display: grid;
+    min-height: 530px;
+    background: #fff;
+    padding: 20px;
+}
+
+.details .recentCustomers .imgBx {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.details .recentCustomers .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details .recentCustomers table tr td h4 span {
+    font-size: 14px;
+    color: #999;
+}
+
+.details .recentCustomers table tr:hover,
+.details .recentCustomers table tr:hover td h4 span {
+    background: #03a9f4;
+    color: #fff;
+}
+
+.details .recentCustomers table tr td {
+    padding: 7px 10px;
+}
+
+.details .recentCustomers table tr td h4 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+
+
+/*làm responsive*/
+
+@media (max-width:992px) {
+    .navigation {
+        left: -300px;
+    }
+    .navigation.active {
+        left: 0;
+        width: 300px;
+    }
+    .main {
+        width: 100%;
+        left: 0;
+    }
+    .main.active {
+        width: calc(100%-300px);
+        left: 300px;
+    }
+    .cardBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:768px) {
+    .details {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .cardHeader h2 {
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
+
+@media (max-width:480px) {
+    .cardBox {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .details .recentOrders {
+        overflow-x: auto;
+    }
+    .details .recentOrders table {
+        width: 600px;
+    }
+    .navigation {
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+    .navigation.active {
+        width: 100%;
+        left: 0;
+    }
+    .toggle.active {
+        z-index: 10000;
+        right: 0;
+        left: initial;
+        position: fixed;
+    }
+    .toggle.active::before {
+        color: #fff;
+    }
+    /* .main,
+    .main.active {
+        width: 100%;
+        left: 0;
+    } */
+}

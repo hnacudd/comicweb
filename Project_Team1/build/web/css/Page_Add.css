@@ -1,0 +1,77 @@
+body {
+    color: #000;
+    /*overflow-x: hidden;*/
+    /*height: 100%;*/
+    /*background-image: url('https://preview.redd.it/5rbuodmlirh31.jpg?auto=webp&s=cc447550b6a2f33db76da2cf513b33a129ad4878');*/
+    /*background-image: url('https://preview.redd.it/5rbuodmlirh31.jpg?auto=webp&s=cc447550b6a2f33db76da2cf513b33a129ad4878');*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: 100%;*/
+}
+.wrapper{
+    /*padding: 0 auto;*/
+    /*    padding-left: 50px;*/
+}
+
+
+
+.blue-text {
+    color: #00BCD4;
+    text-height: 1000px;
+}
+
+.form-control-label {
+    margin-bottom: 0
+}
+.card {
+    padding: 30px 40px;
+    margin-left: 100px;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    align-content: center;
+    border: none !important;
+    box-shadow: 0 6px 12px 0 rgb(0 0 0 / 20%);
+    width: 1500px;
+}
+
+input,
+textarea,
+select,
+button {
+    padding: 8px 15px;
+    border-radius: 5px !important;
+    margin: 5px 0px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    font-size: 18px !important;
+    font-weight: 300
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #00BCD4;
+    outline-width: 0;
+    font-weight: 400;
+}
+
+.btn-block {
+    text-transform: uppercase;
+    font-size: 15px !important;
+    font-weight: 400;
+    height: 43px;
+    cursor: pointer;
+}
+
+.btn-block:hover {
+    color: #fff !important
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}

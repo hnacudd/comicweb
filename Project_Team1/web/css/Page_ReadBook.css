@@ -1,0 +1,35 @@
+body {
+    color: #000;
+    background-image: url("https://th.bing.com/th/id/R.08c8bc951687b22e83b317f9f492f5b8?rik=oaNZYxeQuP14UQ&pid=ImgRaw&r=0");
+    background-repeat: no-repeat;
+    background-size: 100% 
+}
+
+.card {
+    margin-top: 120px;
+    background: #eee;
+    padding: 3em;
+    line-height: 1.5em; }
+
+@media screen and (min-width: 997px) {
+    .wrapper {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; } }
+
+
+.product-title, .price, .sizes, .colors {
+    text-transform: UPPERCASE;
+    font-weight: bold; }
+
+.product-title {
+    margin-top: 0; }
+
+
+.close {
+    color: #0cf;
+    float: left;
+    font-size: 30px;
+    text-decoration: none;
+}

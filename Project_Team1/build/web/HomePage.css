@@ -1,0 +1,456 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --yellow1: #FFD700;
+    --blue2: #0cf;
+    --gray1: #1E1E1E;
+    --blue: #008fb3;
+    --colorfont: #464a4d;
+    --white: #fff;
+    --colorbackground: #eeeeee;
+    --color1: #EEFBF4;
+    --color2: #E6E6E6;
+    --color3: #9FDEB1;
+    --color4: #CBC77D;
+    --color5: #F6D07B;
+    --color6: #58786B;
+    --color7: #5BAD87;
+    --color8: #191919;
+}
+
+body {
+    /*background: var(--white);*/
+    background-image: url('https://preview.redd.it/5rbuodmlirh31.jpg?auto=webp&s=cc447550b6a2f33db76da2cf513b33a129ad4878');
+    background-size: 100%;
+    min-height: auto;
+}
+
+#header-search {
+    background-color: var(--color8);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    transition: 0.6s;
+}
+
+#inside-header-search {
+    /* background-color: var(--gray1); */
+    width: 60%;
+}
+
+.container {
+    float: left;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--gray1);
+    display: flex;
+    padding-left: 20%;
+    justify-content: space-between;
+    margin: 70px 0px;
+    transition: 0s;
+    z-index: 1000000;
+    position: absolute;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    line-height: 10px;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 16px;
+    text-decoration: none;
+    font-size: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100px;
+    transition: 0.6s;
+}
+
+.a-hover :hover {
+    background-color: var(--color3);
+}
+
+header ul li a:hover {
+    font-size: 10px;
+    color: gold;
+    transition: 0.1s;
+    text-decoration: none;
+}
+
+header.sticky {
+    position: fixed;
+    margin: 0 auto;
+    /* padding-left: 20%; */
+    background: rgb(31, 28, 28);
+    justify-self: center;
+}
+
+header .sticky ul li a {
+    color: aliceblue;
+}
+
+#logo {
+    width: 20%;
+    /* background-color: gold; */
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    height: 30px;
+}
+
+#logo a {
+    color: white;
+}
+
+#logo a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+#searchForm {
+    width: 60%;
+    /* background-color: darkcyan; */
+}
+
+#contain-login-header {
+    width: 20%;
+    float: right;
+    text-align: center;
+    display: flex;
+}
+
+#btn-header {
+    background-color: var(--color7);
+    padding: 1px 5px 1px 5px;
+    color: var(--color8);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#btn-header:hover {
+    color: var(--gray1);
+    background-color: var(--color5);
+}
+
+.input-search {
+    height: 29px;
+    font-size: 17px;
+    /* border: 1px solid grey; */
+    float: left;
+    padding: 10px;
+    border: none;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+form.example button {
+    width: 20%;
+    background-color: var(--color7);
+    color: white;
+    font-size: 10px;
+    border: none;
+    height: 29px;
+}
+
+form.example button:hover {
+    color: black;
+    background: var(--color5);
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#btn-login-header {
+    text-transform: uppercase;
+    font-size: 10px;
+    justify-content: center;
+    text-align: center;
+    padding-top: 8px;
+}
+
+#btn-login-header a {
+    background-color: var(--color7);
+    padding: 5px;
+    border: 1px solid black;
+    height: 29px;
+    width: 100px;
+    color: white;
+    text-decoration: none;
+}
+
+#btn-login-header a:hover {
+    background-color: goldenrod;
+    padding: 5px;
+    border: 1px solid black;
+    height: 25px;
+    width: 100px;
+    color: black;
+    text-decoration: none;
+}
+
+
+/*
+Body
+*/
+
+#wrapper {
+    background-color: #f9f9f9;
+    color: #333333;
+    font-size: 14px;
+    line-height: 50px;
+    width: 70%;
+    margin: 0 auto;
+    height: auto;
+}
+
+#item-slide {
+    margin-top: 30px;
+}
+
+.carousel {
+    width: 100%;
+    background: #EEE;
+}
+
+.carousel-cell {
+    width: 100%;
+    height: 400px;
+    padding: 17px;
+    background-color: #f9f9f9;
+    counter-increment: gallery-cell;
+    display: flex;
+}
+
+
+/* cell number */
+
+.carousel-cell:before {
+    display: block;
+    text-align: center;
+    line-height: 200px;
+    justify-self: center;
+    font-size: 80px;
+    color: white;
+}
+
+.flickity-prev-next-button.previous {
+    left: 10px;
+}
+
+.flickity-prev-next-button {
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 5%;
+    transform: translateY(-50%);
+}
+
+.flickity-button {
+    position: absolute;
+    background: var(--colorbackground);
+    border: none;
+    color: #333;
+}
+
+.flickity-page-dots {
+    position: absolute;
+    width: 100%;
+    bottom: -25px;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    text-align: center;
+    line-height: 1;
+    display: none;
+}
+
+.title h1 {
+    margin-top: 38px;
+    padding: 50px;
+    color: var(--gray1);
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+#btn-read {
+    width: 50%;
+    color: var(--gray1);
+    background-color: greenyellow;
+    font-weight: 5000;
+    text-transform: uppercase;
+}
+
+#btn-add {
+    width: 50%;
+    color: var(--gray1);
+    background-color: rgb(255, 166, 0);
+    font-weight: 5000;
+    text-transform: uppercase;
+}
+
+#a-link-name-of-book {
+    color: white;
+    text-align: center;
+}
+
+#a-link-name-of-book:hover {
+    color: rgb(217, 255, 0);
+    text-decoration: none;
+}
+
+.product-name {
+    background-color: black;
+    max-width: 100%;
+    font-size: 17px;
+    max-height: 100px;
+    text-align: center;
+    box-sizing: border-box;
+    text-indent: 5px;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 80%;
+}
+
+.page-pagination {
+    height: 70px;
+    width: 70%;
+    background-color: #f9f9f9;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding: 5px;
+    color: var(--color8);
+}
+
+.bg-carou-cell {
+    max-height: 300px;
+    width: 100%;
+    background-size: contain;
+}
+
+#wrapper-carou-cell {
+    width: 100%;
+    padding-left: 39px;
+    height: 400px;
+}
+
+#wrapper-carou-cell:hover {
+    /*box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 2008px 196px -18px inset;*/
+    /*box-sizing: border-box;*/
+    -ms-transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    transform: scale(1.2);
+}
+
+.page-item .page-link {
+    color: var(--color7);
+    background-color: #f9f9f9;
+}
+
+.produc-image:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 2008px 196px -18px inset;
+    box-sizing: border-box;
+    -ms-transform: scale(0.5);
+    -webkit-transform: scale(0.5);
+    transform: scale(1.05);
+}
+
+#product-wrapper {
+    align-self: center;
+    width: 18.5%;
+    padding: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+#a-img-of-book-list {
+    height: 250px;
+    max-height: 300px;
+    width: 100%;
+    background-size: cover;
+}
+
+#name-carou-cell {
+    background-color: var(--color8);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--white);
+    text-decoration: none;
+    text-overflow: ellipsis;
+    font-size: 17px;
+    font-weight: 500;
+    overflow: hidden;
+    max-width: 100%;
+    max-height: 50px;
+}
+
+#name-carou-cell:hover {
+    color: var(--color5);
+    text-decoration: none;
+}
+
+#carou-cell-a-link-book {
+    text-decoration: none;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+}
+
+#alight-footer {
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    font-weight: var(--colorbackground);
+    font-size: 15px;
+    padding: 10px;
+    line-break: var(--colorfont);
+}
+
+#btn-login-head {
+    color: white;
+    text-transform: uppercase;
+}
+
+#btn-login-head:hover {
+    text-decoration: none;
+    color: var(--color5);
+}
+
+#btn-create-account {
+    color: white;
+    text-transform: uppercase;
+}
+
+#btn-create-account:hover {
+    text-decoration: none;
+    color: var(--color5);
+}

@@ -1,0 +1,245 @@
+* {
+    font-family: Arial;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+:root {
+    blue2: #0cf;
+    blue: #008fb3;
+    colorfont: #464a4d;
+    white: #fff;
+    colorbackground: #eeeeee;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+#wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-image: url('https://preview.redd.it/5rbuodmlirh31.jpg?auto=webp&s=cc447550b6a2f33db76da2cf513b33a129ad4878');
+/*    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    animation: change 60s infinite ease-in-out;*/
+}
+
+#signup-form {
+    background-color: white;
+    border-radius: 4px;
+    color: black;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 189.4px 778.5px 0px;
+    padding: 40px 0px 38px;
+        /*box-shadow: rgba(9, 107, 69) 0px 30px 60px -12px inset, rgba(248, 229, 0) 0px 18px 36px -18px inset;*/
+    text-align: center;
+}
+
+.catchpharse {
+    font-size: 15px;
+    padding: 10px;
+}
+
+.logo {
+    color: colorfont;
+    text-align: center;
+    height: 5vh;
+}
+
+
+/* effect button create */
+
+.button-create {
+    display: inline-block;
+    padding: 0.75rem 1.25rem;
+    border-radius: 10rem;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.button-create :after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    border-radius: 10rem;
+    z-index: -2;
+}
+
+.button-create :before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: green;
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+
+.button-create :hover {
+    color: white;
+}
+
+.button-create :hover:before {
+    width: 100%;
+}
+
+
+/* effect button login */
+
+.button-login {
+    display: inline-block;
+    padding: 0.75rem 4.9rem;
+    border-radius: 10rem;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 5px;
+}
+
+.button-login :after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10rem;
+    z-index: -2;
+}
+
+.button-login :before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: green;
+    transition: all 0.3s;
+    border-radius: 10rem;
+    z-index: -1;
+}
+
+.button-login :hover {
+    color: white;
+}
+
+.button-login :hover:before {
+    width: 100%;
+}
+
+#header-search {
+    background-color: var(--color8);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    transition: 0.6s;
+}
+
+#inside-header-search {
+    /* background-color: var(--gray1); */
+    width: 60%;
+}
+
+.container {
+    float: left;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--gray1);
+    display: flex;
+    padding-left: 20%;
+    justify-content: space-between;
+    margin: 70px 0px;
+    transition: 0s;
+    z-index: 1000000;
+    position: absolute;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    line-height: 10px;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 16px;
+    text-decoration: none;
+    font-size: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100px;
+    transition: 0.6s;
+}
+
+
+/* img {
+    display: inherit;
+    width: 100%;
+    margin: 0 auto;
+    transition: 10s;
+} 
+
+@keyframes change {
+    0% {
+        background-image: url('../image/1.jpg');
+    }
+    20% {
+        background-image: url('../image/2.jpg');
+    }
+    40% {
+        background-image: url('../image/3.jpg');
+    }
+    60% {
+        background-image: url('../image/4.jpg');
+    }
+    80% {
+        background-image: url('../image/5.jpg');
+    }
+    100% {
+        background-image: url('../image/6.jpg');
+    }
+}*/
