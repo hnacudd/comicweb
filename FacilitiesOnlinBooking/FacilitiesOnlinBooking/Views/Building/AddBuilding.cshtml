@@ -1,0 +1,35 @@
+﻿@model FacilitiesOnlinBooking.Model.Building
+
+@{ ViewData["Title"] = "AddBuilding"; }
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddBuilding</title>
+</head>
+<body>
+
+    <h1>Add Building</h1>
+
+    <h4>Building</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="AddBuilding" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label for="name"><b>Building Name</b></label>
+                    <input type="text" placeholder="Building Name" name="name1" id="name" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create Buiding" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <div>
+    </div>
+</body>
+</html>

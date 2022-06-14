@@ -1,0 +1,93 @@
+﻿@model dynamic
+@{
+    ViewData["Title"] = "CreateRequest";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    form {
+        border: 3px solid #f1f1f1;
+    }
+
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #04AA6D;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+    .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+    }
+
+    .container {
+        padding: 16px;
+    }
+
+    span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+</style>
+<h1>CreateRequest</h1>
+<form action="CreateRequest" method="post">
+
+    <div class="container">
+        @{ List<SelectListItem> listBuilding = new List<SelectListItem>();}
+        @{ List<SelectListItem> listRoom = new List<SelectListItem>();}
+        @foreach (var item in Model.Building)
+        {
+            listBuilding.Add(new SelectListItem { Text = item.name, Value = Convert.ToString(item.Id) });
+        }
+        @foreach (var item in Model.Room)
+        {
+            listRoom.Add(new SelectListItem { Text = item.name, Value = Convert.ToString(item.Id) });
+        }
+        @Html.DropDownList("Building", listBuilding)
+        @Html.DropDownList("Room", listRoom)
+        @Html.DropDownList("Slot", new List<SelectListItem>
+        {
+            new SelectListItem{ Text="Slot 1", Value = "1" },
+            new SelectListItem{ Text="Slot 2", Value = "2" },
+            new SelectListItem{ Text="Slot 3", Value = "3" },
+            new SelectListItem{ Text="Slot 4", Value = "4" },
+            new SelectListItem{ Text="Slot 5", Value = "5" },
+            new SelectListItem{ Text="Slot 6", Value = "6" },
+            new SelectListItem{ Text="Slot 7", Value = "7" },
+            new SelectListItem{ Text="Slot 8", Value = "8" },
+        })
+        <input type="datetime-local" id="birthdaytime" name="birthdaytime"></br></br>
+        @Html.TextBox("Note")
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="submit" class="createButton">Create</button>
+            <span class="psw"><a href="/CreateRequest">Create new request</a></span>
+        </div>
+    </div>
+
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

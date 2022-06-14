@@ -1,0 +1,127 @@
+﻿@model IEnumerable<FacilitiesOnlinBooking.Model.Building>
+
+
+@{ ViewData["Title"] = "ListBuilding";
+    Layout = "~/Pages/Shared/_Layout.cshtml"; }
+
+<head>
+    <style>
+        #admin {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #admin td, #admin th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #admin tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            #admin tr:hover {
+                background-color: #ddd;
+            }
+
+            #admin th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #04AA6D;
+                color: white;
+            }
+
+        #student {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #student td, #student th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #student tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            #student tr:hover {
+                background-color: #ddd;
+            }
+
+            #student th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #04AA6D;
+                color: white;
+            }
+
+        button {
+            color: white;
+            padding: 10px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+        }
+
+            button:hover {
+                opacity: 0.8;
+            }
+
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        .normal {
+            width: auto;
+            padding: 10px 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>GetListBuilding</h1>
+
+    <p>
+        @Html.ActionLink("Add", "AddBuilding", new { /* id=item.PrimaryKey */ }) |
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.name)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.name)
+                    </td>
+                    <td>
+                        <button class="normal">
+                            @Html.ActionLink("Edit", "UpdateBuiding", new { id = item.Id })
+                        </button>
+                        <div>
+                            <form action="/Building/DeleteBuilding" method="post"><input type="text" name="id" style="display:none;" value="@item.Id" /><button style="color:blue" class="normal" type="submit">Delete</button></form>
+                        </div>
+                            </td>
+                </tr>
+       }
+        </tbody>
+    </table>
+</body>
+

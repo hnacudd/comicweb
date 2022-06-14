@@ -1,0 +1,91 @@
+﻿@page
+@{
+    ViewData["Title"] = "CreateRequest";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    form {
+        border: 3px solid #f1f1f1;
+    }
+
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #04AA6D;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+    .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+    }
+
+    .container {
+        padding: 16px;
+    }
+
+    span.psw {
+        float: right;
+        padding-top: 16px;
+    }
+
+</style>
+<h1>CreateRequest</h1>
+<form action="/action_page.php" method="post">
+
+    <div class="container">
+        <select name="Building" id="building">
+            <option value="">Building</option>
+            <option value="dog">Alpha</option>
+            <option value="cat">Beta</option>
+            <option value="hamster">Gamma</option>
+            <option value="parrot">Xichma</option>
+        </select></br></br>
+        <select name="slots" id="slot-select">
+            <option value="">Slot</option>
+            <option value="dog">Slot 1</option>
+            <option value="cat">Slot 2</option>
+            <option value="hamster">Slot 3</option>
+            <option value="parrot">Slot 4</option>
+            <option value="spider">Slot 5</option>
+            <option value="goldfish">Slot 6</option>
+        </select></br></br>
+
+        <input type="datetime-local" id="birthdaytime" name="birthdaytime"></br></br>
+        <select name="Room" id="slot-select">
+            <option value="">Room</option>
+            <option value="dog">Room 1</option>
+            <option value="cat">Room 2</option>
+            <option value="hamster">Room 3</option>
+            <option value="parrot">Room 4</option>
+            <option value="spider">Room 5</option>
+            <option value="goldfish">Room 6</option>
+        </select></br></br>
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="createButton">Create</button>
+            <span class="psw"><a href="/CreateRequest">Create new request</a></span>
+        </div>
+    </div>
+
+</form>

@@ -1,0 +1,8 @@
+C:\Users\VACORN\OneDrive\Desktop\fob\FacilitiesOnlinBooking\FOB\obj\Debug\net5.0\FOB.csproj.AssemblyReference.cache
+C:\Users\VACORN\OneDrive\Desktop\fob\FacilitiesOnlinBooking\FOB\obj\Debug\net5.0\FOB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\VACORN\OneDrive\Desktop\fob\FacilitiesOnlinBooking\FOB\obj\Debug\net5.0\FOB.AssemblyInfoInputs.cache
+C:\Users\VACORN\OneDrive\Desktop\fob\FacilitiesOnlinBooking\FOB\obj\Debug\net5.0\FOB.AssemblyInfo.cs
+C:\Users\VACORN\OneDrive\Desktop\fob\FacilitiesOnlinBooking\FOB\obj\Debug\net5.0\FOB.csproj.CoreCompileInputs.cache
+C:\Users\VACORN\OneDrive\Desktop\fob\FacilitiesOnlinBooking\FOB\obj\Debug\net5.0\FOB.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\VACORN\OneDrive\Desktop\fob\FacilitiesOnlinBooking\FOB\obj\Debug\net5.0\FOB.RazorAssemblyInfo.cache
+C:\Users\VACORN\OneDrive\Desktop\fob\FacilitiesOnlinBooking\FOB\obj\Debug\net5.0\FOB.RazorAssemblyInfo.cs

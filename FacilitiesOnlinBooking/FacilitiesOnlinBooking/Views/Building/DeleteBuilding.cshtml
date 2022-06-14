@@ -1,0 +1,26 @@
+﻿@model FacilitiesOnlinBooking.Model.Building
+
+@{ ViewData["Title"] = "UpdateBuilding"; }
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DeleteBuilding</title>
+</head>
+<body>
+
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Building</h4>
+        <hr />
+        <dl class="row">
+        </dl>
+
+        <form asp-action="DeleteBuilding">
+            <input type="submit" value="Delete" class="btn btn-danger" />
+        </form>
+    </div>
+</body>
+</html>

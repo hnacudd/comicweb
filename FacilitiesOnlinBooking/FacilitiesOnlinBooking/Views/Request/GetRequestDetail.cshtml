@@ -1,0 +1,143 @@
+﻿@model FacilitiesOnlinBooking.Model.Request
+
+@{
+    ViewData["Title"] = "GetRequestDetail";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>GetRequestDetail</h1>
+<head>
+    <style>
+        #admin {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #admin td, #admin th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #admin tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            #admin tr:hover {
+                background-color: #ddd;
+            }
+
+            #admin th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #04AA6D;
+                color: white;
+            }
+
+        #student {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #student td, #student th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #student tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            #student tr:hover {
+                background-color: #ddd;
+            }
+
+            #student th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #04AA6D;
+                color: white;
+            }
+
+        button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 10px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+        }
+
+            button:hover {
+                opacity: 0.8;
+            }
+
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        .normal {
+            width: auto;
+            padding: 10px 18px;
+            background-color: Highlight;
+        }
+    </style>
+</head>
+<body>
+    @*<div>
+        <h4>Request</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Id)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Id)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.note)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.note)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.requestStatus)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.requestStatus)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.DateCreated)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.DateCreated)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        @Html.ActionLink("Get List", "GetList", "RequestDetail", new { id = Model.Id })
+    </div>*@
+    <table id="student">
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Id) </th>
+            <th>@Html.DisplayNameFor(model => model.note)</th>
+            <th>@Html.DisplayNameFor(model => model.requestStatus)</th>
+            <th> @Html.DisplayNameFor(model => model.DateCreated)</th>
+        </tr>
+        <tr>
+            <td>@Html.DisplayFor(model => model.Id)</td>
+            <td>@Html.DisplayFor(model => model.note)</td>
+            <td> @Html.DisplayFor(model => model.requestStatus)</td>
+            <td> @Html.DisplayFor(model => model.DateCreated)</td>
+
+        </tr>
+    </table>
+    <div>
+        @Html.ActionLink("Get List", "GetList", "RequestDetail", new { id = Model.Id })
+    </div>
+</body>

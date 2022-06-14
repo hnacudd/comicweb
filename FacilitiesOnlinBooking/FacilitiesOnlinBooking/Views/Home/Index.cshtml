@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+@using FacilitiesOnlinBooking.Model
+@model Account
+<html>
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <div style="display:flex; justify-content:space-between;">
+        <div>
+            <h2>Main Feature</h2>
+        </div>
+        <div style="display:flex">
+            <h3><a href="/Home/UpdateAccount?id=@ViewBag.AccountId">Change Account Information</a></h3>
+            <p>   |    </p>
+            <h3><a href="/Home/Login">Log Out</a></h3>
+        </div>
+    </div>
+    <table>
+        <tr>
+            <th>Feature </th>
+            <th>Gesture</th>
+        </tr>
+        <tr>
+            <td>Account Management</td>
+            <td><a href="/Home/ManagerAccount">Detail</a></td>
+        </tr>
+        <tr>
+        </tr>
+    </table>
+
+</body>
+</html>
+

@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\VACORN\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\VACORN\\.nuget\\packages"
+    ]
+  }
+}

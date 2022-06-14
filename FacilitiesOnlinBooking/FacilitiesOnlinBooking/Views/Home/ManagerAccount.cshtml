@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+@using FacilitiesOnlinBooking.Model
+@model List<Account>
+<html>
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+
+    <div style="display:flex; justify-content:space-between;">
+        <h2>Quản lý tài khoản</h2>
+        <h2><a href="/Home/Index">Account Management</a></h2>
+    </div>
+    <h2 style="color:red;">@ViewBag.mess3</h2>
+    <table>
+        <tr>
+            <th>Email</th>
+            <th>Fulll Name</th>
+            <th>Role</th>
+            <th>Delete account</th>
+            <th>Authorize</th>
+        </tr>
+        @{
+            foreach (Account a in ViewBag.listAccount)
+            {
+                <tr>
+                    <td>@a.email</td>
+                    <td>@a.name</td>
+                    @{
+                        if (a.role == 1)
+                        {
+                            <td>Admin</td>
+                        }
+                        else if (a.role == 2)
+                        {
+                            <td>Staff</td>
+                        }
+                        else
+                        {
+                            <td>Student</td>
+                        }
+                    }
+                    @{
+                        if (ViewBag.role == 1)
+                        {
+                            if (a.role != 1)
+                            {
+                                <td><form action="/Home/DeleteAccount" method="post"><input type="text" name="id" style="display:none;" value="@a.Id" /><button type="submit">Delete</button></form></td>
+                            }
+                            else
+                            {
+                                <td></td>
+                            }
+                        }
+                        else
+                        {
+                            <td>Admin Features</td>
+                        }
+                        if (ViewBag.role == 1)
+                        {
+                            if (a.role != 1)
+                            {
+                                <td><a href="/Home/PhanQuyen?id=@a.Id">Authorize</a></td>
+                            }
+                            else
+                            {
+                                <td></td>
+                            }
+                        }
+                        else
+                        {
+                            <td>Admin Features</td>
+                        }
+
+                    }
+                </tr>
+            }
+        }
+
+    </table>
+
+</body>
+</html>
+
